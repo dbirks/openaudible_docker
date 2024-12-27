@@ -17,6 +17,8 @@ RUN apt-get update && apt-get install -y \
     firefox-esr \
     thunar \
     python3-xdg \
+    libwebkit2gtk-4.1-0 \
+    libwebkit2gtk-4.1-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -48,4 +50,3 @@ CMD ["/init"]
 
 # Expose the web interface port
 EXPOSE 3000
-

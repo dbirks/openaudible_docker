@@ -5,5 +5,13 @@ services:
     image: ghcr.io/dbirks/openaudible
     ports:
       - 3000:3000
-    # volumes:
-    #   - $HOME/OpenAudible:/config/openaudible
+    volumes:
+      # - $HOME/Downloads/OpenAudible:/config/OpenAudible
+      - ./config:/config/OpenAudible
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      # PUID: $UID
+      # PGID: $GID
+      PUID: 1000
+      PGID: 100
