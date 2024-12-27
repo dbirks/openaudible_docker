@@ -1,0 +1,9 @@
+services:
+  openaudible:
+    build:
+      context: .
+    image: ghcr.io/dbirks/openaudible
+    ports:
+      - 3000:3000
+    # volumes:
+    #   - $HOME/OpenAudible:/config/openaudible
